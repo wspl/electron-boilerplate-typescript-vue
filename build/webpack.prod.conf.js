@@ -11,7 +11,7 @@ var cssLoaders = require('./css-loaders')
 module.exports = merge(baseWebpackConfig, {
   entry: {
     app: './app/main.js',
-    background: './app/background.js'
+    background: './app/background.ts'
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {

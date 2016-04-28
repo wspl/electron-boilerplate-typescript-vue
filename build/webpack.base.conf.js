@@ -50,6 +50,12 @@ module.exports = {
         loader: 'vue'
       },
       {
+        test: /\.ts$/,
+        loader: 'babel!ts',
+        include: projectRoot,
+        exclude: /node_modules/
+      },
+      {
         test: /\.js$/,
         loader: 'babel',
         include: projectRoot,

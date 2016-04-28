@@ -14,7 +14,7 @@ var config = require('../config')
 
 module.exports = merge(webpackBaseConfig, {
   entry: {
-    background: './app/background.js'
+    background: './app/background.ts'
   },
   // eval-source-map is faster for development
   devtool: '#eval-source-map',
