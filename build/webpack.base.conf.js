@@ -20,10 +20,10 @@ module.exports = {
     __dirname: false
   },
   resolve: {
-    extensions: ['', '.js', '.vue'],
+    extensions: ['', '.js', '.ts', '.vue'],
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
-      app: path.resolve(__dirname, '../app')
+      app: path.resolve(__dirname, '../app'),
     }
   },
   resolveLoader: {
@@ -31,18 +31,18 @@ module.exports = {
   },
   module: {
     preLoaders: [
-      {
-        test: /\.vue$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /vue-devtools|node_modules/
-      }
+      // {
+      //   test: /\.vue$/,
+      //   loader: 'eslint',
+      //   include: projectRoot,
+      //   exclude: /node_modules/
+      // },
+      // {
+      //   test: /\.js$/,
+      //   loader: 'eslint',
+      //   include: projectRoot,
+      //   exclude: /vue-devtools|node_modules/
+      // }
     ],
     loaders: [
       {
