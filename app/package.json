@@ -5,9 +5,5 @@
   "description": "An Electron + Vue.js project.",
   "author": "Brad Stewart <me@bradstewart.co>",
   "main": "background.js",
-  "dependencies": {
-    "jquery": "2.2.2",
-    "request": "^2.65.0",
-    "superagent": "^1.8.3"
-  }
+  "dependencies": {}
 }
