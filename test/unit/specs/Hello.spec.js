@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Hello from 'app/components/Hello'
+import Hello from '../../../app/renderer/components/Hello'
 
 describe('Hello.vue', () => {
   it('should render correct contents', () => {

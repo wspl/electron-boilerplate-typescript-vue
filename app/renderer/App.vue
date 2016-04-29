@@ -1,7 +1,10 @@
 <template>
-  <div id="app">
-    <img class="logo" src="./assets/logo.png">
-    <hello></hello>
+  <div>
+    <img class="logo" src="assets/logo.png">
+    <router-view></router-view>
+    <p><a v-link="{ path: '/test' }">Switch to Test Page</a></p>
+    <p><a v-link="{ path: '/' }">Switch to Index Page</a></p>
+    <p><a></a></p>
     <p>
       Welcome to your Electron + Vue.js app. To get started, take a look at the
       <a href="https://github.com/vuejs-templates/webpack#folder-structure" target="_blank">README</a>
@@ -20,34 +23,40 @@
   </div>
 </template>
 
-<script>
-  import Hello from './components/Hello'
+<script type="text/babel">
+  import VueRouter from 'vue-router';
+
+  import Hello from './components/Hello';
 
   export default {
     components: {
-      Hello
     }
-  }
+  };
 </script>
 
-<style>
+<style lang="scss" rel="stylesheet/scss">
   html {
     height: 100%;
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      #app {
+        margin-top: -100px;
+        max-width: 600px;
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  #app {
-    margin-top: -100px;
-    max-width: 600px;
-    font-family: Helvetica, sans-serif;
-    text-align: center;
-  }
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
+
+
 </style>
